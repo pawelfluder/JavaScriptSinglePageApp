@@ -1,6 +1,6 @@
 import Dashboard from "./views/Dashboard.js";
 import Posts from "./views/Post.js";
-
+import Settings from "./views/Settings.js";
 
 const navigateTo= url =>
 {
