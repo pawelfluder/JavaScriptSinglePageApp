@@ -1,4 +1,6 @@
 import Dashboard from "./views/Dashboard.js";
+import Posts from "./views/Post.js";
+
 
 const navigateTo= url =>
 {
@@ -9,6 +11,8 @@ const navigateTo= url =>
 const router = async () => {
     const routes = [
         { path: "/", view: Dashboard },
+        { path: "/posts", view: Posts },
+        { path: "/settings", view: Settings },
         //{ path: "/", view: () => console.log("Viewing Dashboard") },
         //{ path: "/posts", view: () => console.log("Viewing Posts") },
         //{ path: "/settings", view: () => console.log("Viewing Settings") },
@@ -35,8 +39,11 @@ const router = async () => {
 
     const view = new match.route.view();
 
-    document.querySelector("#app").innerHTML = await view.getHtml();
-
+    console.log("start");
+    var div = document.querySelector("#app");
+    console.log(div);
+    div.innerHTML = await view.getHtml();
+    
     console.log(match.route.view());
 };
 
