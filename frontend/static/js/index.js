@@ -1,4 +1,4 @@
-import Dashboard from "./views/Dashboard.js"
+import Dashboard from "./views/Dashboard.js";
 
 const navigateTo= url =>
 {
@@ -9,9 +9,9 @@ const navigateTo= url =>
 const router = async () => {
     const routes = [
         { path: "/", view: Dashboard },
-        // { path: "/", view: () => console.log("Viewing Dashboard") },
-        // { path: "/posts", view: () => console.log("Viewing Posts") },
-        // { path: "/settings", view: () => console.log("Viewing Settings") },
+        //{ path: "/", view: () => console.log("Viewing Dashboard") },
+        //{ path: "/posts", view: () => console.log("Viewing Posts") },
+        //{ path: "/settings", view: () => console.log("Viewing Settings") },
     ];
     // Test each route for potential match
     const potentialMatches = routes.map(route =>
@@ -33,18 +33,19 @@ const router = async () => {
         };
     }
 
-    const view = new match.route.view()
+    const view = new match.route.view();
 
     document.querySelector("#app").innerHTML = await view.getHtml();
 
     console.log(match.route.view());
 };
 
-window.addEventListener("popstate", router)
+window.addEventListener("popstate", router);
  
 document.addEventListener("DOMContentLoaded", () =>
 {
-    document.body.addEventListener("click", e => {
+    document.body.addEventListener("click", e =>
+    {
         if (e.target.matches("[data-link]"))
         {
             e.preventDefault();

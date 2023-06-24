@@ -4,7 +4,8 @@ export default class extends AbstractView
 {
     constructor()
     {
-        this.setTittle("Dashboard")
+        super();
+        this.setTitle("Dashboard");
     }
 
     async getHtml()
@@ -17,6 +18,6 @@ export default class extends AbstractView
             <p>
                 <a href="/posts" data-link>View recent posts</a>.
             </p>
-            `;
+        `;
     }
 }

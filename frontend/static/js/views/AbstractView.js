@@ -4,7 +4,7 @@ export default class
     {
     }
 
-    setTittle(title)
+    setTitle(title)
     {
         document.title = title;
     }
