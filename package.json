@@ -1,5 +1,7 @@
 {
   "dependencies": {
-    "express": "^4.18.2"
+    "Babel": "^0.0.1",
+    "express": "^4.18.2",
+    "webpack": "^5.88.0"
   }
 }

@@ -1,6 +1,10 @@
-//import Dashboard from "./views/Dashboard.js";
-//import Posts from "./views/Post.js";
-//import Settings from "./views/Settings.js";
+//import AbstractView from "./AbstractView.js";
+import { AbstractView as AbstractView } from "./AbstractView.js";
+//import Dashboard from "./Dashboard.js";
+// import Posts from "./Post.js";
+// import Settings from "./Settings";
+
+//let gg = AbstractView.getHtml();
 
 const navigateTo = url =>
 {
@@ -44,7 +48,7 @@ const router = async () => {
     console.log(div);
     div.innerHTML = await view.getHtml();
     
-    console.log(match.route.view());
+    console.log(new match.route.view());
 };
 
 window.addEventListener("popstate", router);
@@ -63,22 +67,22 @@ document.addEventListener("DOMContentLoaded", () =>
     router();
 });
 
-class AbstractView
-{
-    constructor()
-    {
-    }
+// class AbstractView
+// {
+//     constructor()
+//     {
+//     }
 
-    setTitle(title)
-    {
-        document.title = title;
-    }
+//     setTitle(title)
+//     {
+//         document.title = title;
+//     }
 
-    async getHtml()
-    {
-        return "";
-    }
-}
+//     async getHtml()
+//     {
+//         return "";
+//     }
+// }
 
 class Dashboard extends AbstractView
 {

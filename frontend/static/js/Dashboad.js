@@ -1,6 +1,6 @@
-import AbstractView from "./AbstractView.js";
+//import AbstractView from "./AbstractView.js";
 
-export default class extends AbstractView
+export default class Dashboard // extends AbstractView
 {
     constructor()
     {

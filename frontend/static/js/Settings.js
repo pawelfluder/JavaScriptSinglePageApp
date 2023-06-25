@@ -1,6 +1,6 @@
-import AbstractView from "./AbstractView.js";
+//import AbstractView from "./AbstractView.js";
 
-export default class extends AbstractView
+export class Settings extends AbstractView
 {
     constructor()
     {
