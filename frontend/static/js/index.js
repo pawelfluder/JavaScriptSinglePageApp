@@ -1,7 +1,7 @@
-//import * as views from "./AbstractView.js";
-import { Dashboard as Dashboard } from "./AbstractView.js";
-import { Posts as Posts } from "./AbstractView.js";
-import { Settings as Settings } from "./AbstractView.js";
+import * as views from "./AbstractView.js";
+//import { Dashboard as Dashboard } from "./AbstractView.js";
+//import { Posts as Posts } from "./AbstractView.js";
+//import { Settings as Settings } from "./AbstractView.js";
 
 const navigateTo = url =>
 {
@@ -11,14 +11,11 @@ const navigateTo = url =>
 
 const router = async () => {
     const routes = [
-        { path: "/", view: Dashboard },
-        { path: "/posts", view: Posts },
-        { path: "/settings", view: Settings },
-        //{ path: "/", view: () => console.log("Viewing Dashboard") },
-        //{ path: "/posts", view: () => console.log("Viewing Posts") },
-        //{ path: "/settings", view: () => console.log("Viewing Settings") },
+        { path: "/", view: views.Dashboard },
+        { path: "/posts", view: views.Posts },
+        { path: "/settings", view: views.Settings },
     ];
-    // Test each route for potential match
+    
     const potentialMatches = routes.map(route =>
     {
         return {
