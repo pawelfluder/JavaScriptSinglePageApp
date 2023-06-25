@@ -1,10 +1,7 @@
-//import AbstractView from "./AbstractView.js";
-import { AbstractView as AbstractView } from "./AbstractView.js";
-//import Dashboard from "./Dashboard.js";
-// import Posts from "./Post.js";
-// import Settings from "./Settings";
-
-//let gg = AbstractView.getHtml();
+//import * as views from "./AbstractView.js";
+import { Dashboard as Dashboard } from "./AbstractView.js";
+import { Posts as Posts } from "./AbstractView.js";
+import { Settings as Settings } from "./AbstractView.js";
 
 const navigateTo = url =>
 {
@@ -84,62 +81,62 @@ document.addEventListener("DOMContentLoaded", () =>
 //     }
 // }
 
-class Dashboard extends AbstractView
-{
-    constructor()
-    {
-        super();
-        this.setTitle("Dashboard");
-    }
+// class Dashboard extends AbstractView
+// {
+//     constructor()
+//     {
+//         super();
+//         this.setTitle("Dashboard");
+//     }
 
-    async getHtml()
-    {
-        return `
-            <h1>Welcome back, Dom</h1>
-            <p>
-                Fugiat voluptate et nisi Lorem cillum anim sit do eiusmod occaecat irure
-            </p>
-            <p>
-                <a href="/posts" data-link>View recent posts</a>.
-            </p>
-        `;
-    }
-}
+//     async getHtml()
+//     {
+//         return `
+//             <h1>Welcome back, Dom</h1>
+//             <p>
+//                 Fugiat voluptate et nisi Lorem cillum anim sit do eiusmod occaecat irure
+//             </p>
+//             <p>
+//                 <a href="/posts" data-link>View recent posts</a>.
+//             </p>
+//         `;
+//     }
+// }
 
-class Posts extends AbstractView
-{
-    constructor()
-    {
-        super();
-        this.setTitle("Posts");
-    }
+// class Posts extends AbstractView
+// {
+//     constructor()
+//     {
+//         super();
+//         this.setTitle("Posts");
+//     }
 
-    async getHtml()
-    {
-        return `
-            <h1>Posts</h1>
-            <p>
-                You are viewing the posts!
-            </p>
-        `;
-    }
-}
+//     async getHtml()
+//     {
+//         return `
+//             <h1>Posts</h1>
+//             <p>
+//                 You are viewing the posts!
+//             </p>
+//         `;
+//     }
+// }
 
-class Settings extends AbstractView
-{
-    constructor()
-    {
-        super();
-        this.setTitle("Setting");
-    }
+// class Settings extends AbstractView
+// {
+//     constructor()
+//     {
+//         super();
+//         this.setTitle("Setting");
+//     }
 
-    async getHtml()
-    {
-        return `
-            <h1>Setting</h1>
-            <p>
-                Manage your privacy and configuration
-            </p>
-        `;
-    }
-}
+//     async getHtml()
+//     {
+//         return `
+//             <h1>Setting</h1>
+//             <p>
+//                 Manage your privacy and configuration
+//             </p>
+//         `;
+//     }
+// }
